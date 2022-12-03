@@ -1,0 +1,11 @@
+.env
+.idea
+db.sqlite3
+venv
+.DS_Store
+
+*.pyc
+**/__pycache__/*
+
+**/migrations/*
+!__init__.py
