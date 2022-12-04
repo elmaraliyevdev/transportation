@@ -18,15 +18,11 @@ from django.urls import path, include
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 urlpatterns = [
+    # Admin urls
     path('admin/', admin.site.urls),
-    path('api/', include('core.urls')),
-
+    # API urls
+    path('', include('core.urls')),
+    # Swagger urls
     path("schema/", SpectacularAPIView.as_view(), name="schema"),
-    path(
-        "docs/",
-        SpectacularSwaggerView.as_view(
-            template_name="swagger-ui.html", url_name="schema"
-        ),
-        name="swagger-ui",
-    ),
+    path("docs/", SpectacularSwaggerView.as_view(template_name="swagger-ui.html", url_name="schema"), name="swagger-ui")
 ]
