@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "70c126d0-4755-48f2-97cb-03eb8b5efd6b",
+		"name": "Transportation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24125574"
+	},
+	"item": [
+		{
+			"name": "PROVIDER",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"UPS\",\n    \"email\": \"ups@gmail.com\",\n    \"phone_number\": \"2349324234\",\n    \"language\": \"EN\",\n    \"currency\": \"USD\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/providers/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"providers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RETRIEVE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/provider/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"provider",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/provider/1/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"provider",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Name 2\",\n    \"email\": \"elmaraliyevdev@gmail.com\",\n    \"phone_number\": \"2349324234\",\n    \"language\": \"AZ\",\n    \"currency\": \"AZN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/provider/2/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"provider",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LIST",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/providers/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"providers",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SERVICE-AREA",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Service Area 1\",\n    \"price\": 10,\n    \"area\": \"POLYGON((30 10, 40 40, 20 40, 10 20, 30 10))\",\n    \"provider\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/service-areas/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"service-areas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RETRIEVE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/service-areas/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"service-areas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/service-areas/1/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"service-areas",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Name 2\",\n    \"email\": \"elmaraliyevdev@gmail.com\",\n    \"phone_number\": \"2349324234\",\n    \"language\": \"AZ\",\n    \"currency\": \"AZN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/service-areas/2/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"service-areas",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LIST",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/service-areas/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"service-areas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LIST SERVICE AREAS BY POINT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/get-service-areas-by-point/?latitude=37.7749&longitude=-122.4194",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"get-service-areas-by-point",
+								""
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "37.7749"
+								},
+								{
+									"key": "longitude",
+									"value": "-122.4194"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
